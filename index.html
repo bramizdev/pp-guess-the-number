@@ -36,7 +36,7 @@
         </div>
         <div class="header__btns">
           <button class="btn" id="rules-btn">Rules</button>
-          <button class="btn" id="info-btn">Info</button>
+          <button class="btn" id="about-btn">About</button>
         </div>
       </header>
       <main class="game">
@@ -68,6 +68,57 @@
             </p>
           </div>
         </div>
+        <dialog class="modal" data-modal="rules">
+          <button
+            class="close-btn"
+            id="close-modal-btn"
+            aria-label="Close dialog."
+          >
+            &times
+          </button>
+          <h2>Guess the number! - Rules</h2>
+          <ol>
+            <li>The game is played between one player and the computer.</li>
+            <li>
+              The computer chooses a number between 1 and 20, and keeps it
+              secret from the player.
+            </li>
+            <li>
+              The player tries to guess the number that the computer has chosen.
+            </li>
+            <li>
+              The player will be given a 20 guesses to make, and if they do not
+              guess the number correctly within that limit, the game is over.
+            </li>
+            <li>
+              The winner is the player who correctly guesses the number in the
+              fewest number of guesses. If the player does not correctly guess
+              the number within the allotted number of guesses, the computer is
+              declared the winner.
+            </li>
+          </ol>
+        </dialog>
+
+        <dialog class="modal" data-modal="about">
+          <button
+            class="close-btn"
+            id="close-modal-btn"
+            aria-label="Close dialog."
+          >
+            &times
+          </button>
+          <h2>Guess the number! - About</h2>
+          <p>
+            This is a really small project created to practice Javascript and
+            DOM manipulation.
+          </p>
+          <p>
+            The project is part of the Jonas Schmedtmann's The Complete
+            JavaScript Course 2023: From Zero to Expert! course, I added a few
+            additional feautures such as responsive view, accessibility and
+            additional UI change when you lose the game.
+          </p>
+        </dialog>
       </main>
     </div>
     <script src="./script.js"></script>

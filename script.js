@@ -1,11 +1,13 @@
 'use strict';
 
 const $ = (selector) => document.querySelector(selector);
+const $$ = (selector) => document.querySelectorAll(selector);
 
 const $rulesBtn = $('#rules-btn');
-const $infoBtn = $('#info-btn');
+const $aboutBtn = $('#about-btn');
 const $checkBtn = $('#check-btn');
 const $againBtn = $('#again-btn');
+const $closeModal = $$('#close-modal-btn');
 const $message = $('#message');
 const $score = $('#score');
 const $highscore = $('#highscore');
@@ -87,4 +89,16 @@ $checkBtn.addEventListener('click', (e) => {
 $againBtn.addEventListener('click', (e) => {
   e.preventDefault();
   init();
+});
+
+$rulesBtn.addEventListener('click', () => {
+  $('[data-modal="rules"]').showModal();
+});
+
+$aboutBtn.addEventListener('click', () => {
+  $('[data-modal="about"]').showModal();
+});
+
+$closeModal.forEach((closeBtn) => {
+  closeBtn.addEventListener('click', (e) => e.target.offsetParent.close());
 });
