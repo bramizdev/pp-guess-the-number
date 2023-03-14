@@ -35,16 +35,17 @@
           <p>(Between 1 and 20)</p>
         </div>
         <div class="header__btns">
-          <button class="btn">Rules</button>
-          <button class="btn">Info</button>
+          <button class="btn" id="rules-btn">Rules</button>
+          <button class="btn" id="info-btn">Info</button>
         </div>
       </header>
       <main class="game">
-        <div class="game__secret-number">?</div>
+        <div class="game__secret-number" id="secret-box">?</div>
         <div class="game__container">
           <form class="game__form">
             <label class="game__label" for="input">Type your guess:</label>
             <input
+              id="input"
               class="game__input"
               min="1"
               max="20"
@@ -52,15 +53,23 @@
               aria-describedby="input-example"
             />
             <p class="visually-hidden" id="input-example">Example: 5</p>
-            <button class="btn" id="check" type="submit">Check!</button>
+            <button class="btn" id="check-btn" type="submit">Check!</button>
+            <button class="btn" id="again-btn">Again!</button>
           </form>
           <div class="game__display">
-            <p role="status" aria-live="polite">Start Guessing...</p>
-            <p role="status" aria-live="polite">Score: <span>20</span></p>
-            <p role="status" aria-live="polite">Highscore <span>0</span></p>
+            <p role="status" aria-live="polite" id="message">
+              ❓ Start Guessing...
+            </p>
+            <p role="status" aria-live="polite">
+              💯 Score: <span id="score">20</span>
+            </p>
+            <p role="status" aria-live="polite">
+              🏆 Highscore: <span id="highscore">0</span>
+            </p>
           </div>
         </div>
       </main>
     </div>
+    <script src="./script.js"></script>
   </body>
 </html>
